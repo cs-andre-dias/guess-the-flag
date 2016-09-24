@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mM3-1o-2R3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Guess_the_Flag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-Zn-c76">
+                                <frame key="frameInset" minX="75" minY="100" width="200" height="100"/>
+                                <state key="normal" backgroundImage="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsY-Y6-PyX">
+                                <frame key="frameInset" minX="75" minY="230" width="200" height="100"/>
+                                <state key="normal" backgroundImage="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiM-tj-F0s">
+                                <frame key="frameInset" minX="75" minY="360" width="200" height="100"/>
+                                <state key="normal" backgroundImage="us"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dsY-Y6-PyX" firstAttribute="centerX" secondItem="jmM-Zn-c76" secondAttribute="centerX" id="4jP-mb-2nC"/>
+                            <constraint firstItem="QiM-tj-F0s" firstAttribute="centerX" secondItem="dsY-Y6-PyX" secondAttribute="centerX" id="CS9-gP-aso"/>
+                            <constraint firstItem="QiM-tj-F0s" firstAttribute="top" secondItem="dsY-Y6-PyX" secondAttribute="bottom" constant="30" id="X4L-Ja-VyX"/>
+                            <constraint firstItem="jmM-Zn-c76" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="lae-Na-hl6"/>
+                            <constraint firstItem="dsY-Y6-PyX" firstAttribute="top" secondItem="jmM-Zn-c76" secondAttribute="bottom" constant="30" id="mxS-bJ-276"/>
+                            <constraint firstItem="jmM-Zn-c76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yap-4U-hMz"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="b5y-SV-eRm"/>
+                    <connections>
+                        <outlet property="button1" destination="jmM-Zn-c76" id="dM8-xV-qEB"/>
+                        <outlet property="button2" destination="dsY-Y6-PyX" id="K1w-86-ZJE"/>
+                        <outlet property="button3" destination="QiM-tj-F0s" id="COP-aJ-YQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1282" y="-645"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MbW-Xb-gM8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mM3-1o-2R3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZI-CO-whb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fPN-nG-kDi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzH-cq-1hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.60000000000002" y="-644.52773613193403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>
