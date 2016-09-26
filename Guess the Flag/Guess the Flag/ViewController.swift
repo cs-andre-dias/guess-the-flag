@@ -5,8 +5,9 @@
 //  Created by Andre Dias on 23/09/16.
 //  Copyright © 2016 Andre Dias. All rights reserved.
 //
-
+import GameplayKit
 import UIKit
+
 
 class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     
     var countries = [String]()
     var score = 0
+    var correctAnswer = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +35,14 @@ class ViewController: UIViewController {
     }
     
     func askQuestion(){
+        countries = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: countries) as! [String]
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
+        
+        correctAnswer = GKRandomSource.sharedRandom().nextInt(upperBound: 3)
+        
+        title = countries[correctAnswer].uppercased()
     }
 
     override func didReceiveMemoryWarning() {
