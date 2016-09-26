@@ -1,4 +1,6 @@
 # guess-the-flag
-Second project based on tutorials of hackingwithswift to learn:
+
+Segundo projeto baseado nos tutoriais do site hackingwithswift, esse tutorial tem que como foco praticar: 
 Asset catalogs, UIButton, CALayer, UIColor, UIAlertController.
-It's a game to match the country's name and its flag
+É um simples jogo de advinhar o nome da bandeira de um país.
+
